@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+  /* fonts */
+  --font-headlines: "Montserrat", sans-serif;
+  --font-secondary-headlines: "Bebas Neue", sans-serif;
+  --font-text: "Inter", sans-serif;
+
+  /* breakpoints */
   --breakpoint-smest: 300px;
   --breakpoint-sm: 325px;
   --breakpoint-medium: 650px;
@@ -15,3 +21,26 @@ absolute inset-0
 
 sticky top-0 z-50
 */
+
+body {
+  /* for 
+   Headings
+   Navigation
+   Buttons
+ */
+  /* font-family: "Montserrat", sans-serif; */
+
+  /* for 
+   Hero headlines
+   Product section titles
+   */
+   /* font-family: "Bebas Neue", sans-serif; */
+
+   /* 
+   Inter is perfect for:
+   paragraphs
+   product descriptions
+   small text
+   Very readable. */
+   font-family: "Inter", sans-serif;
+}
