@@ -117,3 +117,7 @@ Write the page structure in plain text:
     Footer
 
 Then code each section one by one.
+
+
+
+#variant

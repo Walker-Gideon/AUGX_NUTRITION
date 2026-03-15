@@ -1,3 +1,3 @@
-export default function Button({ text, classname }) {
-    return <button className={classname}>{text}</button>;
+export default function Button({ children, classname }) {
+    return <button className={classname}>{children}</button>;
 }   
