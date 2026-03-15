@@ -1,5 +1,8 @@
 ## PROJECT LAYOUT
 ################## LANDING PAGE #######################
+[ LOGO ]                         [ Products ] [ Benefits ] [ About ] [ Order Now ]
+
+
 1. Hero section
     Heading : Fuel Your Body. Elevate Your Training.
     Subheading : Premium gym supplements designed to support
@@ -8,6 +11,32 @@
     Background idea:
         gym athlete
         product image
+
+------------------------------------------------
+Fuel Your Body. Elevate Your Training.
+
+Premium supplements designed to support
+muscle growth, recovery and performance.
+
+✔ High-Quality Ingredients
+✔ Muscle Growth Support
+✔ Faster Recovery
+✔ Athlete Approved
+
+[ Order Now ]
+------------------------------------------------
+
+One Important Tip
+
+For supplement brands, product images sell the most.
+
+So your hero should look like:
+
+Left side:
+Text + benefits + button
+
+Right side:
+Product containers
 
 2. Product Section
         Show the products clearly.
