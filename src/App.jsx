@@ -1,5 +1,9 @@
+import LandingPageLayout from "/src/layouts/landingPage/LandingPageLayout";
+
 export default function App() {
   return (
-    <div>AUGX Nutrition</div>
+    <div>
+      <LandingPageLayout />
+    </div>
   );
 }
