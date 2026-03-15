@@ -118,6 +118,122 @@ Write the page structure in plain text:
 
 Then code each section one by one.
 
-
-
 #variant
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+### Montserrat
+
+Why it works:
+
+* Clean and modern
+* Strong for **headlines**
+* Very popular with **startup brands**
+
+Use it for:
+
+* Headings
+* Navigation
+* Buttons
+
+Example:
+
+```
+Fuel Your Body. Elevate Your Training.
+```
+
+Bold **Montserrat** looks powerful.
+
+---
+
+# 2️⃣ Strong Athletic Look
+
+### Bebas Neue
+
+This font screams **fitness brand**.
+
+Best for:
+
+* Hero headlines
+* Product section titles
+
+Example:
+
+```
+SERIOUS MASS
+BUILD MUSCLE FASTER
+```
+
+But don't use it for paragraphs because it’s too condensed.
+
+---
+
+# 3️⃣ Clean Modern Body Text
+
+### Inter
+
+Inter is perfect for:
+
+* paragraphs
+* product descriptions
+* small text
+
+Very readable.
+
+---
+
+# 4️⃣ Perfect Font Combination for AUGX
+
+Use **two fonts only**.
+
+Recommended combo:
+
+### Headings
+
+**Bebas Neue**
+
+### Body Text
+
+**Inter**
+
+Example structure:
+
+```
+HERO TITLE → Bebas Neue
+Section Titles → Bebas Neue
+Paragraphs → Inter
+Buttons → Montserrat or Inter
+```
+
+---
+
+# 5️⃣ Example Typography System
+
+Hero title
+
+```
+Bebas Neue
+72px
+Bold
+```
+
+Section titles
+
+```
+Bebas Neue
+36px
+```
+
+Body text
+
+```
+Inter
+16px
+```
+
+Buttons
+
+```
+Inter
+600 weight
+```
+
