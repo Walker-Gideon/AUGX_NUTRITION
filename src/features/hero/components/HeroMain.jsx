@@ -9,7 +9,7 @@ import Img from "/src/assets/img01.jpg";
 
 export default function HeroMain() {
     return (
-        <Main classname={"w-full bg-green-500 px-36"}>
+        <Main classname={"w-full bg-green-500 px-36 absolute inset-0 h-screen"}>
             <Flex jsText="between" cText="center" classname={"h-full"}>
                 <Group>
                     <HeaderTexts>
