@@ -1,0 +1,90 @@
+## PROJECT LAYOUT
+################## LANDING PAGE #######################
+1. Hero section
+    Heading : Fuel Your Body. Elevate Your Training.
+    Subheading : Premium gym supplements designed to support
+                    strength, muscle growth and peak performance.
+    Button : Order Today
+    Background idea:
+        gym athlete
+        product image
+
+2. Product Section
+        Show the products clearly.
+Examples:
+    Serious Mass
+        Ideal for muscle gain
+        High calorie formula
+        Protein + carbs
+    Serious Gainz
+        Strength support
+        Performance boost
+        Recovery support
+
+Add:
+    product image
+    short description
+    order button
+
+3. Benefits Section
+✔ High-Quality Ingredients
+✔ Supports Muscle Growth & Recovery
+✔ For Athletes & Everyday Gym-Goers
+✔ Clean Formulas You Can Trust
+
+Turn them into cards.
+    [icon] High Quality Ingredients
+    [icon] Faster Recovery
+    [icon] Muscle Growth
+    [icon] Athlete Approved
+
+4. Social Proof Section
+    Add 3-4 testimonials
+    Add 3-4 reviews
+        Even if they are new.
+
+Add things like:
+    customer testimonials
+    transformation photos
+    athlete endorsement
+
+Example:
+    "I gained 4kg in 6 weeks using AUGX Serious Mass."
+
+5. Call To Action
+Repeat:
+    Order Today
+    Free Delivery Available
+
+Button:
+    Buy Now
+
+6. Footer
+Include:
+    Instagram link
+    contact
+    email
+    location
+    copyright
+
+################# Folder Ideas #####################
+/components
+   Hero.jsx
+   Products.jsx
+   Benefits.jsx
+   Testimonials.jsx
+   CTA.jsx
+
+############### TIPS ######################
+One Important Tip
+Don't design randomly.
+First do this before coding:
+Write the page structure in plain text:
+    Hero
+    Products
+    Benefits
+    Testimonials
+    CTA
+    Footer
+
+Then code each section one by one.
