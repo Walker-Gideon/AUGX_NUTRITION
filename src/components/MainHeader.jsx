@@ -1,9 +1,11 @@
+import Header from "/src/ui/Header";
+
 export default function MainHeader() {
     return (
-        <div>
+        <Header main={true} classname={"h-15 w-full px-36 sticky top-0 z-50 transparent"} jstext={"between"}>
             <div>Logo</div>
             <div>Navigation</div>
             <div>Button</div>
-        </div>
+        </Header>
     );
 }
