@@ -4,7 +4,7 @@ export default function Navigation() {
             <ul className="flex gap-5">
                 <li>Products</li>
                 <li>Benefits</li>
-                <li>About</li>
+                <li>About Us</li>
             </ul>
         </nav>
     );
