@@ -237,3 +237,57 @@ Inter
 600 weight
 ```
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+| Color      | Hex       | Usage                |
+| ---------- | --------- | -------------------- |
+| Black      | `#19191A` | Background / navbar  |
+| Red        | `#AF3D3B` | Buttons / highlights |
+| Light Gray | `#ECEAEE` | Section backgrounds  |
+| Warm Gray  | `#5D5F56` | Secondary text       |
+| Soft Beige | `#B2A69F` | subtle accents       |
+
+Primary (Brand)
+Used for important elements.
+#AF3D3B
+Use for:
+CTA buttons
+highlights
+hover effects
+
+Dark Background
+#19191A
+Use for:
+navbar
+hero background
+footer
+This gives that strong gym / performance feel.
+
+Light Background
+#ECEAEE
+Use for:
+product sections
+testimonials
+content blocks
+
+Text Colors
+Primary text
+#19191A
+Secondary text
+#5D5F56
+
+Hero section
+
+Background: #19191A
+Text: #FFFFFF
+Button: #AF3D3B
+
+Product section
+
+Background: #ECEAEE
+Text: #19191A
+Buttons: #AF3D3B
+
+Footer
+
+Background: #19191A
+Text: #ECEAEE
