@@ -9,7 +9,7 @@ import Testimonials from "/src/features/testimonials/Testimonials";
 
 export default function LandingPageLayout() {
   return (
-    <Container>
+    <Container classname={"bg-tertiary"}>
       <MainHeader />
       <Hero />
       <Products />

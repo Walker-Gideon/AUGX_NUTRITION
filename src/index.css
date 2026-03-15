@@ -7,12 +7,11 @@
   --font-text: "Inter", sans-serif;
 
   /* colors */
-  --color-primary: "#AF3D3B";
-  --color-secondary: "#19191A";
-  --color-tertiary: "#ECEAEE";
-  --color-quaternary: "#5D5F56";
-  /* --text-main: #19191A; */
-  --color-quinary: "#B2A69F";
+  --color-primary: #AF3D3B;
+  --color-secondary: #19191A;
+  --color-tertiary: #ECEAEE; /* this is good*/
+  --color-quaternary: #5D5F56; /*Nice gray*/
+  --color-quinary: #B2A69F; /*Nice Beige*/
 
   /* breakpoints */
   --breakpoint-smest: 300px;
