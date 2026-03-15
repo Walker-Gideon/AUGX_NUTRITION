@@ -19,7 +19,9 @@ export default function HeroMain() {
                         Premium supplements designed to support
                         muscle growth, recovery and performance.
                     </HeaderTexts>
-                    <Button classname={"bg-blue-500"}>Order Today</Button>
+                    <Button classname={"bg-blue-500"}>
+                        Order Now
+                    </Button>
                 </Group>
                 <Group>
                     <Image source={Img} alternate="Image of Creatine" classname={"w-50 h-50"} />
