@@ -1,3 +1,5 @@
+import { LuArrowDown } from "react-icons/lu";
+
 import Main from "/src/ui/Main";
 import Flex from "/src/ui/Flex";
 import Group from "/src/ui/Group";
@@ -6,6 +8,7 @@ import Button from "/src/ui/Button";
 import Paragraph from "/src/ui/Paragraph";
 import Container from "/src/ui/Container";
 import HeaderTexts from "/src/ui/HeaderTexts";
+import ActionButton from "/src/components/ActionButton";
 
 import Img from "/src/assets/img01.jpg";
 
@@ -23,13 +26,17 @@ export default function Hero() {
                     Elevate Your Training.
                 </Paragraph>
             </HeaderTexts>
-            <HeaderTexts secondary={true} classname={"px-2 py-6 text-xl lg:text-2xl text-quaternary font-text w-full"}>
+            <HeaderTexts secondary={true} classname={"py-6 text-xl lg:text-2xl text-quaternary font-text w-full"}>
               Premium supplements designed to support
               muscle growth, recovery and performance.
             </HeaderTexts>
-            <Button classname={"bg-blue-500"}>
-              Order Now
-            </Button>
+            <Flex classname={"items-center justify-center gap-4 mb-16 lg:mb-0"}>
+                <ActionButton icon={false} padding={"py-3 px-10"} />
+                <Button classname={"border flex items-center gap-2 rounded-full py-3 px-6 cursor-pointer medium:text-sm font-headlines group shadow-xl/30"}>
+                    Learn More
+                    <LuArrowDown size={18} className=" group-hover:animate-bounce transition-all" />
+                </Button>
+            </Flex>
           </Group>
           <Group>
             <Image source={Img} alternate="Image of Creatine" classname={"w-50 h-50"} />
