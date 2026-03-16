@@ -13,8 +13,8 @@ export default function Hero() {
     <Container classname={"h-screen w-full"}>
       <Main classname={"w-full px-36 absolute inset-0 h-screen"}>
         <Flex jsText="between" cText="center" classname={"h-full"}>
-          <Group>
-            <HeaderTexts>
+          <Group classname={"w-2/3"}>
+            <HeaderTexts classname={"text-6xl font-headlines w-full"}>
               Fuel Your Body. Elevate Your Training.
             </HeaderTexts>
             <HeaderTexts secondary={true}>
