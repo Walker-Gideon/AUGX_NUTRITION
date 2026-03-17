@@ -32,8 +32,8 @@ export default function Hero() {
               muscle growth, recovery and performance.
             </HeaderTexts>
             <Flex classname={"items-center justify-center gap-2"}>
-                <ActionButton icon={false} padding={"py-3 px-8"} />
-                <Button classname={"border flex items-center gap-2 rounded-full py-3 px-4 cursor-pointer medium:text-sm font-headlines group shadow-xl/30 whitespace-nowrap"}>
+                <ActionButton icon={false} padding={"py-3.5 px-8"} />
+                <Button classname={"border flex items-center gap-2 rounded-full py-3.5 px-4 cursor-pointer text-xs medium:text-sm uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"}>
                     Learn More
                     <LuArrowDown size={18} className=" group-hover:animate-bounce transition-all" />
                 </Button>
