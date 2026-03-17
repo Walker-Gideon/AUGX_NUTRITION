@@ -9,7 +9,7 @@ export default function MainHeader() {
         <Header classname={"h-15 w-full px-4 md:px-10 lg:px-16 top-6 z-50 bg-transparent sticky"}>
             <Group classname={"w-full flex items-center justify-between"}>
                 <Logo />
-                {/* <Navigation /> */}
+                <Navigation />
                 <Group classname={"hidden middle:flex"}>
                     <ActionButton />
                 </Group>
