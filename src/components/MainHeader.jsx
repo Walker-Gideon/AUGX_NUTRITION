@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 
 export default function MainHeader() {
     return (
-        <Header main={true} classname={"h-15 w-full lg:px-36 px-4 sticky top-3 z-50 bg-transparent"} jstext={"between"}>
+        <Header main={true} classname={"h-15 w-full lg:px-36 px-4 medium:px-16 sticky top-3 medium:top-6 z-50 bg-transparent"} jstext={"between"}>
             <Logo />
             {/* <Navigation /> */}
             <ActionButton />
