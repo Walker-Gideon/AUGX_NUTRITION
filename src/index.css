@@ -12,6 +12,8 @@
   --color-tertiary: #ECEAEE; /* this is good*/
   --color-quaternary: #5D5F56; /*Nice gray*/
   --color-quinary: #B2A69F; /*Nice Beige*/
+  --color-background: #ffffff;
+  --color-border: #e8e8e8;
 
   /* 
   --background: #ffffff;
