@@ -24,3 +24,24 @@ export default function Products() {
     </Container>
   );
 }
+
+function ProductHeader() {
+  return (
+    <Group>
+      <HeaderTexts classname={"text-4xl lg:text-5xl font-bold text-foreground"}>
+        Our Products
+      </HeaderTexts>
+      <HeaderTexts secondary={true} type="subHeading" classname={"max-w-2xl mx-auto"}>
+        Carefully formulated with premium ingredients to support your fitness goals
+      </HeaderTexts>
+    </Group>
+  );
+}
+
+function ProductCard() {
+  return (
+    <Group>
+      
+    </Group>
+  );
+}
