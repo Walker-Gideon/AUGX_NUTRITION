@@ -1,5 +1,7 @@
 import Group from "/src/ui/Group";
 import Card from "/src/components/Card";
+import Paragraph from "/src/ui/Paragraph";
+import HeaderTexts from "/src/ui/HeaderTexts";
 
 export default function ProductCard({ product }) {
   return (
@@ -7,16 +9,16 @@ export default function ProductCard({ product }) {
         <Group>
           {/* Product Icon || Image */}
           {/* <div className="text-6xl mb-6">{product.icon}</div> */}
-          <div className="w-full h-64 bg-border" />
+          <div className="w-full h-56 bg-border" />
         </Group>
-        <Group classname={"p-8 lg:p-10"}>
-          {/* Product Info */}
-          <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">
+
+        <Group classname={"p-8"}>
+          <HeaderTexts secondary={true} classname={"text-2xl font-bold text-headlines mb-1"}>
             {product.name}
-          </h3>
-          <p className="text-muted-foreground mb-6">
+          </HeaderTexts>
+          <Paragraph classname={"text-sm text-quaternary font-text mb-4"}>
             {product.description}
-          </p>
+          </Paragraph>
 
           {/* Features */}
           <ul className="space-y-3 mb-8">
