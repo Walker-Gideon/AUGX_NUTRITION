@@ -1,8 +1,8 @@
 import Group from "/src/ui/Group";
-import ProductCard from "./ProductCard";
 import Container from "/src/ui/Container";
-import ProductHeader from "./ProductHeader";
 import products from "/src/data/productsData";
+import ProductCard from "./components/ProductCard";
+import ProductHeader from "./components/ProductHeader";
 
 export default function Products() {
   return (
