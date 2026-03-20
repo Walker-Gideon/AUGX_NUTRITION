@@ -10,6 +10,7 @@ const products = [
       'Great for hard gainers'
     ],
     cta: 'Order Now',
+    // price: '$49.99',
     icon: '🏋️'
   },
   {
@@ -23,6 +24,7 @@ const products = [
       'Suitable for active athletes'
     ],
     cta: 'Order Now',
+    // price: '$49.99',
     icon: '⚡'
   }
 ];
