@@ -1,3 +1,4 @@
+import Span from "/src/ui/Span";
 import Group from "/src/ui/Group";
 import Button from "/src/ui/Button";
 import Card from "/src/components/Card";
@@ -17,27 +18,25 @@ export default function ProductCard({ product }) {
           <HeaderTexts secondary={true} classname={"text-2xl font-semibold text-headlines"}>
             {product.name}
           </HeaderTexts>
-          <Paragraph classname={"text-sm text-quaternary font-text mb-3"}>
+          <Paragraph classname={"text-sm text-quaternary font-text mb-4"}>
             {product.description}
           </Paragraph>
 
-          {/* Features */}
-          <ul className="space-y-2 mb-6">
+          <ul className="space-y-2 mb-8">
             {product.features.map((feature, idx) => (
-              <li key={idx} className="flex items-center gap-3 text-foreground">
-                <span className="text-primary font-bold">✓</span>
+              <li key={idx} className="flex items-center gap-3 text-foreground text-sm">
+                <Span classname={"text-primary font-bold"}>✓</Span>
                 {feature}
               </li>
             ))}
           </ul>
 
-          {/* Price and CTA */}
           <Group classname="space-y-4">
             <Paragraph classname={"text-3xl font-bold text-primary"}>
               {product.price}
             </Paragraph>
-            <Button classname={"w-full bg-primary text-primary-foreground hover:bg-primary/90"}>
-              Add to Cart
+            <Button classname={"w-full py-3 px-6 bg-primary hover:bg-primary/90 text-sm text-white rounded-full cursor-pointer transition-all"}>
+              {product.cta}
             </Button>
           </Group>
         </Group>

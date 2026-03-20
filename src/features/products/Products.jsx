@@ -2,7 +2,9 @@ import Group from "/src/ui/Group";
 import ProductCard from "./ProductCard";
 import Container from "/src/ui/Container";
 import ProductHeader from "./ProductHeader";
+import products from "/src/data/productsData";
 
+/*
 const products = [
   {
     id: 1,
@@ -31,6 +33,7 @@ const products = [
     icon: '⚡'
   }
 ]
+*/
 
 export default function Products() {
   return (
