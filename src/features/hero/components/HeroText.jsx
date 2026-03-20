@@ -8,6 +8,7 @@ import Button from "/src/ui/Button";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import ActionButton from "/src/components/ActionButton";
+
 import { useTypewriter } from "/src/hooks/useTypewriter";
 
 export default function HeroText() {
@@ -44,9 +45,9 @@ export default function HeroText() {
                     {displayed}
                     <span className="inline-block w-[2px] h-[1em] bg-primary align-middle ml-0.5 animate-pulse" />
                 </Span>
-                <span className={`transition-opacity duration-300 ${showIcon ? "opacity-100" : "opacity-0"}`}>
+                <Span classname={`transition-opacity duration-300 ${showIcon ? "opacity-100" : "opacity-0"}`}>
                     <CiDeliveryTruck size={18} />
-                </span>
+                </Span>
             </Paragraph>
         </Group>
     );
