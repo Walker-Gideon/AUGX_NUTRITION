@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { LuArrowDown } from "react-icons/lu";
 import { CiDeliveryTruck } from "react-icons/ci";
 
@@ -9,41 +8,15 @@ import Button from "/src/ui/Button";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import ActionButton from "/src/components/ActionButton";
-
-const FULL_TEXT = "Free delivery available";
-const TYPE_SPEED = 80;
-const PAUSE_AFTER = 1800;
-const ERASE_SPEED = 40;
+import { useTypewriter } from "/src/hooks/useTypewriter";
 
 export default function HeroText() {
-    const [displayed, setDisplayed] = useState("");
-    const [phase, setPhase] = useState("typing"); // "typing" | "pausing" | "erasing"
-
-    useEffect(() => {
-        let timeout;
-
-        if (phase === "typing") {
-            if (displayed.length < FULL_TEXT.length) {
-                timeout = setTimeout(() => {
-                    setDisplayed(FULL_TEXT.slice(0, displayed.length + 1));
-                }, TYPE_SPEED);
-            } else {
-                timeout = setTimeout(() => setPhase("erasing"), PAUSE_AFTER);
-            }
-        } else if (phase === "erasing") {
-            if (displayed.length > 0) {
-                timeout = setTimeout(() => {
-                    setDisplayed(FULL_TEXT.slice(0, displayed.length - 1));
-                }, ERASE_SPEED);
-            } else {
-                setPhase("typing");
-            }
-        }
-
-        return () => clearTimeout(timeout);
-    }, [displayed, phase]);
-
-    const showIcon = displayed === FULL_TEXT;
+    const { displayed, isDone: showIcon } = useTypewriter({
+        text: "Free delivery available",
+        typeSpeed: 80,
+        eraseSpeed: 40,
+        pauseAfter: 1800,
+    });
 
     return (
         <Group classname={"w-full lg:w-2/3"}>
