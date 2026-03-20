@@ -1,4 +1,5 @@
 import Group from "/src/ui/Group";
+import Button from "/src/ui/Button";
 import Card from "/src/components/Card";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
@@ -12,16 +13,16 @@ export default function ProductCard({ product }) {
           <div className="w-full h-56 bg-border" />
         </Group>
 
-        <Group classname={"p-8"}>
-          <HeaderTexts secondary={true} classname={"text-2xl font-bold text-headlines mb-1"}>
+        <Group classname={"p-6"}>
+          <HeaderTexts secondary={true} classname={"text-2xl font-semibold text-headlines"}>
             {product.name}
           </HeaderTexts>
-          <Paragraph classname={"text-sm text-quaternary font-text mb-4"}>
+          <Paragraph classname={"text-sm text-quaternary font-text mb-3"}>
             {product.description}
           </Paragraph>
 
           {/* Features */}
-          <ul className="space-y-3 mb-8">
+          <ul className="space-y-2 mb-6">
             {product.features.map((feature, idx) => (
               <li key={idx} className="flex items-center gap-3 text-foreground">
                 <span className="text-primary font-bold">✓</span>
@@ -32,12 +33,12 @@ export default function ProductCard({ product }) {
 
           {/* Price and CTA */}
           <Group classname="space-y-4">
-            <p className="text-3xl font-bold text-primary">
+            <Paragraph classname={"text-3xl font-bold text-primary"}>
               {product.price}
-            </p>
-            {/* <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+            </Paragraph>
+            <Button classname={"w-full bg-primary text-primary-foreground hover:bg-primary/90"}>
               Add to Cart
-            </Button> */}
+            </Button>
           </Group>
         </Group>
       </Card>
