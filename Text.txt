@@ -61,6 +61,11 @@ Add:
 ✔ For Athletes & Everyday Gym-Goers
 ✔ Clean Formulas You Can Trust
 
+tag: 'Quality'
+tag: 'Performance'
+tag: 'Recovery'
+tag: 'Trusted'
+
 Turn them into cards.
     [icon] High Quality Ingredients
     [icon] Faster Recovery
