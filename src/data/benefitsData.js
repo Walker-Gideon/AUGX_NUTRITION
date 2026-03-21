@@ -1,23 +1,23 @@
 const benefits = [
   {
-    icon: '✨',
     title: 'High-Quality Ingredients',
-    description: 'Premium sourced ingredients tested for purity and potency'
+    description: 'Premium sourced ingredients tested for purity and potency',
+    colSpan: "col-span-2 middle:col-span-3"
   },
   {
-    icon: '🔥',
     title: 'Muscle Growth & Recovery',
-    description: 'Formulated to support strength gains and faster recovery times'
+    description: 'Formulated to support strength gains and faster recovery times',
+    colSpan: "col-span-1 middle:col-span-2"
   },
   {
-    icon: '🏃',
     title: 'For Athletes & Gym-Goers',
-    description: 'Trusted by fitness enthusiasts and professional athletes'
+    description: 'Trusted by fitness enthusiasts and professional athletes',
+    colSpan: "col-span-1 middle:col-span-2"
   },
   {
-    icon: '✅',
     title: 'Clean Formulas You Can Trust',
-    description: 'No artificial additives, just pure performance nutrition'
+    description: 'No artificial additives, just pure performance nutrition',
+    colSpan: "col-span-2 middle:col-span-3"
   }
 ];
 
