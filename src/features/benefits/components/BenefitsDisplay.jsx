@@ -4,13 +4,12 @@ import HeaderTexts from "/src/ui/HeaderTexts";
 
 export default function BenefitsDisplay({ benefit, colSpan }) {
     return (
-        <Group classname={`${colSpan}`}>
+        <Group classname={`relative border border-border w-full h-56 p-4 flex flex-col justify-end overflow-hidden bg-quinary ${colSpan}`}>
             {/* Image here */}
-            <Group classname={"border border-border w-full h-56"}></Group>
-            <Group classname={"hidden"}>
+            <div className="z-10 relative">
                 <HeaderTexts>{benefit.title}</HeaderTexts>
                 <Paragraph>{benefit.description}</Paragraph>
-            </Group>
+            </div>
         </Group>
     );
 }
