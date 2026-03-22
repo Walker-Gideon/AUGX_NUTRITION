@@ -30,26 +30,3 @@ export default function TestimonialsDisplay({ testimonial }) {
     </Card>
   );
 }
-
-/*
-<div key={idx} className="bg-card border-border p-8 lg:p-10">
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <span key={i} className="text-yellow-500 text-lg">★</span>
-                ))}
-              </div>
-
-              <p className="text-foreground mb-6 leading-relaxed italic">
-                "{testimonial.content}"
-              </p>
-
-              <div>
-                <p className="font-bold text-foreground">
-                  {testimonial.name}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role}
-                </p>
-              </div>
-            </div>
-            */
