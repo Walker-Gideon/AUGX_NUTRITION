@@ -1,20 +1,13 @@
 import Group from "/src/ui/Group";
 import Container from "/src/ui/Container";
 import testimonials from "/src/data/testimonialsData";
+import TestimonialsHeader from "./components/TestimonialsHeader";
 
 export default function Testimonials() {
   return (
     <Container section="testimonials" classname={"h-full w-full px-4 md:px-10 lg:px-16 py-15 md:py-20 lg:py-32 bg-primary/5"}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center space-y-4 mb-16 lg:mb-20">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Trusted by Athletes
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real results from real customers
-          </p>
-        </div>
+        <TestimonialsHeader />
 
         {/* Testimonials Grid */}
         <Group classname={"grid md:grid-cols-3 gap-8 lg:gap-10"}>
