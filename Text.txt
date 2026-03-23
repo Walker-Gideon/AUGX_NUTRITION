@@ -93,6 +93,17 @@ Repeat:
 Button:
     Buy Now
 
+----------------------------------------
+Start Building Muscle Today
+
+Premium supplements designed to help you
+gain size, improve performance, and recover faster.
+
+[ Order Now ]
+
+Free Delivery Available
+----------------------------------------
+
 6. Footer
 Include:
     Instagram link
