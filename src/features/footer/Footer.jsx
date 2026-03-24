@@ -1,28 +1,55 @@
+import Group from "/src/ui/Group";
 import FooterUi from "/src/ui/FooterUi";
+import Paragraph from "/src/ui/Paragraph";
+import HeaderTexts from "/src/ui/HeaderTexts";
+
+const quickLinks = [
+    { name: "Home", href: "#" },
+    { name: "Products", href: "#" },
+    { name: "Benefits", href: "#" },
+    { name: "Testimonials", href: "#" },
+  ];
+
+  const supportLinks = [
+    { name: "Contact Us", href: "#" },
+    { name: "FAQ", href: "#" },
+    { name: "Shipping", href: "#" },
+    { name: "Returns", href: "#" },
+  ];
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const styling = {
+    header: "font-headlines font-bold mb-4",
+    paragraph: "text-white/70 text-base medium:text-sm",
+    list: "space-y-2 text-sm",
+    listItem: "hover:text-primary transition-colors",
+    input: "px-4 py-2 rounded-l-lg text-black w-full",
+    button: "bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors",
+  }
+
   return (
     <FooterUi>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+      <Group classname={"md:max-w-7xl md:mx-auto px-4 md:px-10 lg:px-16"}>
+        <Group classname={"grid medium:grid-cols-2 md:grid-cols-3 large:grid-cols-4 gap-8"}>
           {/* Brand */}
-          <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">AUGX</h3>
-            <p className="text-white/70 text-sm">
+          <Group classname={"md:col-span-1"}>
+            <HeaderTexts classname={`text-2xl ${styling.header}`}>AUGX</HeaderTexts>
+            <Paragraph classname={"text-white/70 text-base medium:text-sm"}>
               Fuel Your Body. Elevate Your Training.
-            </p>
-          </div>
+            </Paragraph>
+          </Group>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+          <Group>
+            <HeaderTexts classname={`${styling.header}`}>Quick Links</HeaderTexts>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-primary transition-colors">Home</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Products</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Benefits</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Testimonials</a></li>
             </ul>
-          </div>
+          </Group>
 
           {/* Support */}
           <div>
@@ -52,19 +79,19 @@ export default function Footer() {
               </button>
             </div>
           </div>
-        </div>
+        </Group>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <Group classname={"border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"}>
           <p className="text-sm text-white/50 mb-4 md:mb-0">
-            © {new Date().getFullYear()} AUGX. All rights reserved.
+            © {currentYear} AUGX. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-white/50 hover:text-white transition-colors">Terms of Service</a>
           </div>
-        </div>
-      </div>
+        </Group>
+      </Group>
     </FooterUi>
   );
 }
