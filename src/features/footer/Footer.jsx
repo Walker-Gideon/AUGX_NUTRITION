@@ -1,13 +1,15 @@
+import FooterUi from "/src/ui/FooterUi";
+
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white py-12 md:py-16">
+    <FooterUi>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <h3 className="text-2xl font-bold mb-4">AUGX</h3>
             <p className="text-white/70 text-sm">
-              Fueling your performance and recovery.
+              Fuel Your Body. Elevate Your Training.
             </p>
           </div>
 
@@ -63,6 +65,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </FooterUi>
   );
 }
