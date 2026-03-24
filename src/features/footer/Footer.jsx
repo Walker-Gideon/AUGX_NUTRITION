@@ -1,4 +1,4 @@
-import { LuInstagram } from "react-icons/lu";
+import { LuInstagram, LuArrowRight } from "react-icons/lu";
 
 import Group from "/src/ui/Group";
 import Button from "/src/ui/Button";
@@ -69,7 +69,7 @@ export default function Footer() {
           </Group>
 
           {/* Newsletter */}
-          <Group>
+          <Group classname={"md:col-span-2 large:col-span-1"}>
             <HeaderTexts classname={`${styling.header}`}>Stay Updated</HeaderTexts>
             <Paragraph classname={styling.paragraph}>
               Get exclusive offers and product updates.
@@ -78,17 +78,17 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-sm outline-none"}
+                className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs outline-none"}
               />
-              <button type="submit" className={"bg-primary px-5 h-full rounded-r-lg hover:bg-primary/90 transition-colors flex items-center justify-center"}>
-                →
-              </button>
+              <Button type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
+                <LuArrowRight size={18} />
+              </Button>
             </form>
           </Group>
         </Group>
 
         {/* Bottom */}
-        <Group classname={"border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"}>
+        <Group classname={"border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center"}>
           <Paragraph classname={"text-sm text-white/50 mb-4 md:mb-0"}>
             © {currentYear} AUGX. All rights reserved.
           </Paragraph>
