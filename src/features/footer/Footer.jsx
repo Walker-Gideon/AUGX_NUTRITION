@@ -1,20 +1,17 @@
+import { LuInstagram } from "react-icons/lu";
+
 import Group from "/src/ui/Group";
+import Button from "/src/ui/Button";
 import FooterUi from "/src/ui/FooterUi";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
+import { UnorderedList, ListItem } from "/src/ui/List";
 
 const quickLinks = [
-    { name: "Home", href: "#" },
-    { name: "Products", href: "#" },
-    { name: "Benefits", href: "#" },
-    { name: "Testimonials", href: "#" },
-  ];
-
-  const supportLinks = [
-    { name: "Contact Us", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Shipping", href: "#" },
-    { name: "Returns", href: "#" },
+    { name: "Home", to: "hero" },
+    { name: "Products", to: "products" },
+    { name: "Benefits", to: "benefits" },
+    { name: "Testimonials", to: "testimonials" },
   ];
 
 export default function Footer() {
@@ -22,8 +19,8 @@ export default function Footer() {
   const styling = {
     header: "font-headlines font-bold mb-4",
     paragraph: "text-white/70 text-base medium:text-sm",
-    list: "space-y-2 text-sm",
-    listItem: "hover:text-primary transition-colors",
+    list: "space-y-2 text-sm text-white/70",
+    listItem: "cursor-pointer hover:text-primary transition-colors",
     input: "px-4 py-2 rounded-l-lg text-black w-full",
     button: "bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors",
   }
@@ -43,53 +40,58 @@ export default function Footer() {
           {/* Quick Links */}
           <Group>
             <HeaderTexts classname={`${styling.header}`}>Quick Links</HeaderTexts>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Products</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Benefits</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Testimonials</a></li>
-            </ul>
+            <UnorderedList classname={styling.list}>
+              {quickLinks.map((link) => (
+                <ListItem key={link.to}>
+                  <Button to={link.to} classname={styling.listItem}>
+                    {link.name}
+                  </Button>
+                </ListItem>
+              ))}
+            </UnorderedList>
           </Group>
 
           {/* Support */}
-          <div>
-            <h4 className="font-bold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Shipping</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Returns</a></li>
-            </ul>
-          </div>
+          <Group>
+            <HeaderTexts classname={`${styling.header}`}>Support</HeaderTexts>
+            <Group classname={"text-sm"}>
+              {/* How should I handle this? */}
+              <Button classname={`text-white/70 mb-2 ${styling.listItem}`}>
+                Contact Us
+              </Button>
+              <Paragraph classname={styling.paragraph}>
+                Connect with us
+              </Paragraph>
+              <a href="#" className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 ${styling.listItem}`}>
+                <LuInstagram size={25} />
+              </a>
+            </Group>
+          </Group>
 
           {/* Newsletter */}
-          <div>
-            <h4 className="font-bold mb-4">Stay Updated</h4>
-            <p className="text-sm text-white/70 mb-4">
+          <Group>
+            <HeaderTexts classname={`${styling.header}`}>Stay Updated</HeaderTexts>
+            <Paragraph classname={styling.paragraph}>
               Get exclusive offers and product updates.
-            </p>
-            <div className="flex">
+            </Paragraph>
+            <form className={"flex mt-8 h-11"}>
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-4 py-2 rounded-l-lg text-black w-full"
+                className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-sm outline-none"}
               />
-              <button className="bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors">
+              <button type="submit" className={"bg-primary px-5 h-full rounded-r-lg hover:bg-primary/90 transition-colors flex items-center justify-center"}>
                 →
               </button>
-            </div>
-          </div>
+            </form>
+          </Group>
         </Group>
 
         {/* Bottom */}
         <Group classname={"border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"}>
-          <p className="text-sm text-white/50 mb-4 md:mb-0">
+          <Paragraph classname={"text-sm text-white/50 mb-4 md:mb-0"}>
             © {currentYear} AUGX. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/50 hover:text-white transition-colors">Terms of Service</a>
-          </div>
+          </Paragraph>
         </Group>
       </Group>
     </FooterUi>
