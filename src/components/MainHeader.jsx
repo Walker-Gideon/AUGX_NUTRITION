@@ -10,10 +10,10 @@ export default function MainHeader() {
             <Group classname={"w-full flex items-center justify-between"}>
                 <Logo />
                 <Navigation />
-                <Group classname={"hidden middle:flex"}>
+                <Group classname={"hidden large:flex"}>
                     <ActionButton />
                 </Group>
-                <Group classname={"middle:hidden"}>
+                <Group classname={"large:hidden"}>
                     <ActionButton menu={true} />
                 </Group>
             </Group>
