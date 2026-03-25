@@ -11,6 +11,22 @@ import ActionButton from "/src/components/ActionButton";
 
 import { useTypewriter } from "/src/hooks/useTypewriter";
 
+// In the future, this data will come from the database.
+const stats = [
+  {
+    number: "10K+",
+    text: "Satisfied Customers"
+  },
+  {
+    number: "5★",
+    text: "Average Rating"
+  },
+  {
+    number: "100%",
+    text: "Quality Assured"
+  }
+];
+
 export default function HeroText() {
     const { displayed, isDone: showIcon } = useTypewriter({
         text: "Free delivery available",
@@ -51,18 +67,12 @@ export default function HeroText() {
             </Paragraph>
 
             <Flex classname={"max-w-md mx-auto large:mx-0 large:max-w-full item-center justify-between large:justify-start gap-8 pt-4"}>
-              <div>
-                <p className="text-2xl font-bold text-foreground">10K+</p>
-                <p className="text-sm text-muted-foreground">Satisfied Customers</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-foreground">5★</p>
-                <p className="text-sm text-muted-foreground">Average Rating</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-foreground">100%</p>
-                <p className="text-sm text-muted-foreground">Quality Assured</p>
-              </div>
+              {stats.map((stat, index) => (
+                <Group key={index}>
+                  <Paragraph classname={"text-2xl font-bold font-headlines text-foreground"}>{stat.number}</Paragraph>
+                  <Paragraph classname={"text-sm font-text text-muted-foreground"}>{stat.text}</Paragraph>
+                </Group>
+              ))}
             </Flex>
         </Group>
     );

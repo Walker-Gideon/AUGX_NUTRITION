@@ -13,14 +13,17 @@
   --color-quaternary: #5D5F56; /*Nice gray*/
   --color-quinary: #B2A69F; /*Nice Beige*/
   --color-background: #ffffff;
+
   --color-border: #e8e8e8;
+  --color-foreground: #171717;
+  --color-muted-foreground: #737373;
   /* --color-secondary-bg: #f7f7f7; */
 
   /* 
   --background: #ffffff;
   --foreground: #171717;
   --card: #ffffff;
-  --card-foreground: #171717;
+  --card-foreground: #171717; foreground
   --popover: #ffffff;
   --popover-foreground: #171717;
   --primary: #1c1c1c;
