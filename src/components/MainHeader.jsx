@@ -6,7 +6,7 @@ import ActionButton from "./ActionButton";
 
 export default function MainHeader() {
     return (
-        <Header classname={"h-15 w-full px-4 md:px-10 lg:px-16 top-6 z-50 bg-transparent sticky"}>
+        <Header classname={"h-15 w-full px-4 md:px-10 lg:px-16 top-6 z-50 bg-transparent fixed"}>
             <Group classname={"w-full flex items-center justify-between"}>
                 <Logo />
                 <Navigation />
