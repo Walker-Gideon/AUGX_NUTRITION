@@ -34,7 +34,7 @@ export default function HeroText() {
             <Flex classname={"items-center justify-center middle:justify-start gap-2 medium:gap-4"}>
                 <ActionButton icon={false} padding={"py-3.5 px-8 middle:px-10"} />
 
-                <Button classname={"border flex items-center gap-2 rounded-full py-3.5 px-4 middle:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"}>
+                <Button classname={"border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 middle:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"}>
                     <Span>Learn More</Span>
                     <LuArrowDown size={18} className="group-hover:translate-y-1 duration-500 transition-all" />
                 </Button>
