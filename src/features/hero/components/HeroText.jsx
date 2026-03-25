@@ -9,23 +9,8 @@ import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import ActionButton from "/src/components/ActionButton";
 
+import stats from "/src/data/heroStatsData";
 import { useTypewriter } from "/src/hooks/useTypewriter";
-
-// In the future, this data will come from the database.
-const stats = [
-  {
-    number: "10K+",
-    text: "Satisfied Customers"
-  },
-  {
-    number: "5★",
-    text: "Average Rating"
-  },
-  {
-    number: "100%",
-    text: "Quality Assured"
-  }
-];
 
 export default function HeroText() {
     const { displayed, isDone: showIcon } = useTypewriter({
