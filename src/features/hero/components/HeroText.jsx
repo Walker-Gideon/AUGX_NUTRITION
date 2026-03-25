@@ -21,7 +21,7 @@ export default function HeroText() {
 
     return (
         <Group classname={"w-full lg:w-2/3"}>
-            <HeaderTexts classname={"text-4xl medium:text-5xl text-primary font-headlines font-semibold uppercase w-full"}>
+            <HeaderTexts classname={"text-4xl medium:text-5xl font-headlines font-bold uppercase w-full"}>
                 <Paragraph classname={"hero-line [text-shadow:2px_3px_12px_rgba(175,61,59,0.25)] [animation-delay:0.1s]"}>Fuel Your Body.</Paragraph>
                 <Paragraph classname={"hero-line [text-shadow:2px_3px_12px_rgba(175,61,59,0.25)] [animation-delay:0.35s]"}>Elevate Your Training.</Paragraph>
             </HeaderTexts>
