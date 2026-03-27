@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { LuArrowDown } from "react-icons/lu";
 import { CiDeliveryTruck } from "react-icons/ci";
 
@@ -34,11 +35,17 @@ export default function HeroText() {
 
             <Flex classname={"items-center justify-center large:justify-start gap-2 large:gap-4"}>
                 <ActionButton padding={"py-3.5 px-8 large:px-10"} />
-
-                <Button classname={"border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 large:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"}>
+                <Link
+                    to="products"
+                    smooth={true}
+                    spy={true}
+                    duration={500}
+                    offset={-100}
+                    className="border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 large:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"
+                >
                     <Span>Learn More</Span>
                     <LuArrowDown size={18} className="group-hover:translate-y-1 duration-500 transition-all" />
-                </Button>
+                </Link>
             </Flex>
 
             <Paragraph classname={"text-sm text-primary font-text w-full my-5 large:my-8 middle:my-6 flex items-center justify-center large:justify-start gap-2 px-4"}>
