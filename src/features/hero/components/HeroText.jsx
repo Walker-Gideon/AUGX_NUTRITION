@@ -33,7 +33,7 @@ export default function HeroText() {
             </HeaderTexts>
 
             <Flex classname={"items-center justify-center large:justify-start gap-2 large:gap-4"}>
-                <ActionButton icon={false} padding={"py-3.5 px-8 large:px-10"} />
+                <ActionButton padding={"py-3.5 px-8 large:px-10"} />
 
                 <Button classname={"border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 large:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"}>
                     <Span>Learn More</Span>
