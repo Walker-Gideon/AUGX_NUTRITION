@@ -7,12 +7,7 @@ import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import { UnorderedList, ListItem } from "/src/ui/List";
 
-const quickLinks = [
-    { name: "Home", to: "hero" },
-    { name: "Products", to: "products" },
-    { name: "Benefits", to: "benefits" },
-    { name: "Testimonials", to: "testimonials" },
-  ];
+import quickLinks from "/src/data/footerData";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,7 +26,7 @@ export default function Footer() {
         <Group classname={"grid medium:grid-cols-2 md:grid-cols-3 large:grid-cols-4 gap-8"}>
           {/* Brand */}
           <Group classname={"md:col-span-1"}>
-            <HeaderTexts classname={`text-2xl ${styling.header}`}>AUGX</HeaderTexts>
+            <HeaderTexts classname={`text-2xl uppercase ${styling.header}`}>AUGX</HeaderTexts>
             <Paragraph classname={"text-white/70 text-base medium:text-sm"}>
               Fuel Your Body. Elevate Your Training.
             </Paragraph>
