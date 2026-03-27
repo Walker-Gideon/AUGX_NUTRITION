@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { LuInstagram, LuArrowRight } from "react-icons/lu";
 
 import Group from "/src/ui/Group";
@@ -37,10 +38,17 @@ export default function Footer() {
             <HeaderTexts classname={`${styling.header}`}>Quick Links</HeaderTexts>
             <UnorderedList classname={styling.list}>
               {quickLinks.map((link) => (
-                <ListItem key={link.to}>
-                  <Button to={link.to} classname={styling.listItem}>
+                <ListItem key={link.link}>
+                  <Link
+                    to={link.link}
+                    smooth={true}
+                    spy={true}
+                    duration={500}
+                    offset={-100}
+                    className={styling.listItem}
+                  >
                     {link.name}
-                  </Button>
+                  </Link>
                 </ListItem>
               ))}
             </UnorderedList>
