@@ -8,5 +8,5 @@ export default function Button({ children, classname, primary, padding, onclick,
     }
 
     // Default
-    return <button onClick={onclick} className={classname}>{children}</button>;
+    return <button onClick={onclick} className={`cursor-pointer ${classname}`}>{children}</button>;
 }   
