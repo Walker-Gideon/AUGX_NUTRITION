@@ -3,23 +3,7 @@ import { Link } from "react-scroll";
 
 import Group from "/src/ui/Group";
 
-const buttons = [
-    {
-        name: "Products",
-        link: "products",
-        styling: "flex-1"
-    },
-    {
-        name: "Benefits",
-        link: "benefits",
-        styling: "flex-1"
-    },
-    {
-        name: "Testimonials",
-        link: "testimonials",
-        styling: "flex-1 whitespace-nowrap"
-    }
-];
+import buttons from "/src/data/navigationData";
 
 export default function Navigation() {
     const [activeIndex, setActiveIndex] = useState(null);
