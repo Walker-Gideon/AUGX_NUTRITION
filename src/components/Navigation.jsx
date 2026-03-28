@@ -20,6 +20,7 @@ export default function Navigation() {
                         duration={500}
                         offset={-100}
                         onSetActive={() => setActiveIndex(index)}
+                        onSetInactive={() => setActiveIndex(prev => prev === index ? null : prev)}
                         className={`
                             group/navitem
                             ${button.styling}
