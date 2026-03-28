@@ -19,7 +19,7 @@ export default function Navigation() {
                         spy={true}
                         duration={500}
                         offset={-100}
-                        onClick={() => setActiveIndex(index)}
+                        onSetActive={() => setActiveIndex(index)}
                         className={`
                             group/navitem
                             ${button.styling}
