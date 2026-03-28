@@ -42,12 +42,13 @@ export default function MainHeader() {
 function Menu({ isOpen, setIsOpen }) {
     // ${isOpen ? `w-70 h-110 md:w-82 md:h-120 lg:w-92` : `w-13 h-13`}
     // backdrop-blur-md
+
     return (
-        <Group classname={`border border-primary bg-white rounded-4xl overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "w-70 h-110 medium:w-82 medium:h-85" : "hidden"}`}>
+        <Group classname={`border border-primary bg-white rounded-4xl overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "w-65 h-80 medium:w-80 medium:h-90" : "hidden"}`}>
             <Group classname={"p-6 medium:p-8 relative w-full h-full flex flex-col justify-between"}>
                 <Paragraph classname="text-sm font-bold text-quaternary font-headlines">Menu</Paragraph>
                 
-                <Group classname={"w-17 h-35 flex flex-col justify-between text-2xl font-medium"}>
+                <Group classname={"w-17 h-35 medium:h-38 flex flex-col justify-between text-2xl font-medium"}>
                     {buttons.map((button, index) => (
                         <Link
                             key={index}
@@ -57,21 +58,13 @@ function Menu({ isOpen, setIsOpen }) {
                             duration={500}
                             offset={-100}
                             onClick={() => setIsOpen(false)}
-                            className={`group/navitem flex cursor-pointer hover:text-primary transition-all duration-500 ease-in-out font-headlines`}
+                            className={`flex cursor-pointer hover:text-primary transition-all duration-500 ease-in-out font-headlines relative after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 ${button.afterWidth}`}
                         >
                             {button.name}
-                            <span
-                            // ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}
-                                className={`
-                                    absolute -bottom-1 left-1/2 -translate-x-1/2 h-[2px] bg-primary rounded-full
-                                    transition-all duration-300 ease-in-out
-                                    
-                                `}
-                            />
                         </Link>
                     ))}
                 </Group>
-                <ActionButton />
+                <ActionButton padding={"w-full flex items-center justify-center text-center py-3 middle:py-3.5"} />
             </Group>
         </Group>
     );
