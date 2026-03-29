@@ -25,26 +25,24 @@ export default function MainHeader() {
                 <Group classname={"hidden large:flex"}>
                     <ActionButton />
                 </Group>
-                <Group classname={"large:hidden"}>
+                <Group classname={"large:hidden z-50 relative"}>
                     <ActionButton
                         menu={true}
+                        state={open}
                         onclick={handleMenu}
                     />
                 </Group>
             </Group>
-            <Group classname="absolute top-2.5 right-4.5 md:right-8.5 overflow-hidden">
-                {open && <Menu isOpen={open} setIsOpen={setOpen} />}
+            <Group classname={"large:hidden absolute -top-0 right-10 overflow-hidden z-40"}>
+                <Menu isOpen={open} setIsOpen={setOpen} />
             </Group>
         </Header>
     );
 }
 
 function Menu({ isOpen, setIsOpen }) {
-    // ${isOpen ? `w-70 h-110 md:w-82 md:h-120 lg:w-92` : `w-13 h-13`}
-    // backdrop-blur-md
-
     return (
-        <Group classname={`border border-primary bg-white rounded-4xl overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "w-65 h-80 medium:w-80 medium:h-90" : "hidden"}`}>
+        <Group classname={`border border-primary bg-white rounded-4xl overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "w-65 h-80 medium:w-80 medium:h-90" : "w-11.5 h-11.5"}`}>
             <Group classname={"p-6 medium:p-8 relative w-full h-full flex flex-col justify-between"}>
                 <Paragraph classname="text-sm font-bold text-quaternary font-headlines">Menu</Paragraph>
                 
