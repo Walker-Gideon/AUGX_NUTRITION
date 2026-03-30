@@ -5,7 +5,6 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import Flex from "/src/ui/Flex";
 import Span from "/src/ui/Span";
 import Group from "/src/ui/Group";
-import Button from "/src/ui/Button";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import ActionButton from "/src/components/ActionButton";

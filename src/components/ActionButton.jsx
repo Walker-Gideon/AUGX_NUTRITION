@@ -1,10 +1,11 @@
-import { LuAlignJustify, LuX } from "react-icons/lu";
+import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "motion/react";
+import { LuAlignJustify, LuX, LuArrowDown } from "react-icons/lu";
 
 import Span from "/src/ui/Span";
 import Button from "/src/ui/Button";
 
-export default function ActionButton({ padding, menu, onclick, state }) {
+export default function ActionButton({ padding, menu, onclick, state, classname }) {
     if (menu) {
         return (
             <Button onclick={onclick} primary={true} padding={"p-2 medium:p-2.5"} classname={`group relative flex items-center gap-1 text-white z-50 ${state ? "" : "border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}`}>
@@ -24,8 +25,16 @@ export default function ActionButton({ padding, menu, onclick, state }) {
     }
 
     return (
-        <Button onclick={onclick} primary={true} padding={padding} classname={"flex items-center gap-2 text-white border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}>
+        <Link
+            to="products"
+            smooth={true}
+            spy={true}
+            duration={500}
+            offset={-100}
+            className={`border rounded-full cursor-pointer text-xs font-headlines group transition-all uppercase font-semibold whitespace-nowrap flex items-center gap-2 text-white border-primary bg-primary shadow-xl/30 hover:shadow-xl/40 ${classname} ${padding ? `${padding}` : `py-3 middle:py-3.5 middle:px-6 px-4`}`}
+        >
             <Span>Order Now</Span>
-        </Button>
+            <LuArrowDown size={18} className="group-hover:translate-y-1 duration-500 transition-all" />
+        </Link>
     );
 }
