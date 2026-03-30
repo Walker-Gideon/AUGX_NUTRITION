@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -8,6 +9,8 @@ import ActionButton from "./ActionButton";
 import buttons from "/src/data/navigationData";
 
 export default function HeaderMenu({ isOpen, setIsOpen }) {
+    const [activeIndex, setActiveIndex] = useState(null);
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -42,15 +45,19 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                     transition={{ delay: 0.2 + index * 0.15 }}
                                 >
                                     <Link
+                                        key={index}
                                         to={button.link}
                                         smooth={true}
                                         spy={true}
                                         duration={500}
                                         offset={-100}
                                         onClick={() => setIsOpen(false)}
-                                        className={`inline-block cursor-pointer hover:text-primary transition-all duration-300 ease-in-out font-headlines relative after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:bg-primary after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 ${button.afterWidth}`}
+                                        onSetActive={() => setActiveIndex(index)}
+                                        onSetInactive={() => setActiveIndex(prev => prev === index ? null : prev)}
+                                        className={`group/navitem relative flex flex-col cursor-pointer w-fit transition-colors duration-300 ${activeIndex === index ? "text-primary" : "hover:text-primary"}`}
                                     >
                                         {button.name}
+                                        <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[2px] bg-primary rounded-full transition-all duration-300 ease-in-out ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}`} />
                                     </Link>
                                 </motion.div>
                             ))}

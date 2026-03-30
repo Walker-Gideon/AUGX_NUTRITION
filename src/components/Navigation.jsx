@@ -29,14 +29,16 @@ export default function Navigation() {
                             ${activeIndex === index ? "text-primary" : "hover:text-primary"}
                         `}
                     >
-                        {button.name}
-                        <span
-                            className={`
-                                absolute -bottom-1 left-1/2 -translate-x-1/2 h-[2px] bg-primary rounded-full
-                                transition-all duration-300 ease-in-out
-                                ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}
-                            `}
-                        />
+                        <span className="relative w-fit">
+                            {button.name}
+                            <span
+                                className={`
+                                    absolute -bottom-1 left-1/2 -translate-x-1/2 h-[2px] bg-primary rounded-full
+                                    transition-all duration-300 ease-in-out
+                                    ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}
+                                `}
+                            />
+                        </span>
                     </Link>
                 ))}
             </Group>
