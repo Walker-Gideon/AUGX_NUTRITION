@@ -3,9 +3,9 @@ import { useState } from "react";
 import Logo from "./Logo";
 import Group from "/src/ui/Group";
 import Header from "/src/ui/Header";
+import HeaderMenu from "./HeaderMenu";
 import Navigation from "./Navigation";
 import ActionButton from "./ActionButton";
-import HeaderMenu from "./HeaderMenu";
 
 export default function MainHeader() {
     const [open, setOpen] = useState(false);
