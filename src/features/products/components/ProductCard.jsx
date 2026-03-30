@@ -4,6 +4,7 @@ import Button from "/src/ui/Button";
 import Card from "/src/components/Card";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
+import { handleOrder } from "/src/helpers/helpers";
 
 export default function ProductCard({ product }) {
   return (
@@ -35,7 +36,10 @@ export default function ProductCard({ product }) {
             <Paragraph classname={"text-3xl font-bold text-primary"}>
               {product.price}
             </Paragraph>
-            <Button classname={"w-full py-3 px-6 bg-primary hover:bg-primary/90 text-sm text-white rounded-full cursor-pointer transition-all"}>
+            <Button
+              onclick={() => handleOrder(product.name)}
+              classname={"w-full py-3 px-6 bg-primary hover:bg-primary/90 text-sm text-white rounded-full cursor-pointer transition-all"}
+            >
               {product.cta}
             </Button>
           </Group>
