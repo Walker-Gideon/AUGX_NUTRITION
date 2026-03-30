@@ -8,11 +8,20 @@ import { handleOrder } from "/src/helpers/helpers";
 
 export default function ProductCard({ product }) {
   return (
-      <Card classname="" type="cards">
-        <Group>
-          {/* Product Icon || Image */}
-          {/* <div className="text-6xl mb-6">{product.icon}</div> */}
-          <div className="w-full h-56 bg-border" />
+      <Card classname="group overflow-hidden" type="cards">
+        <Group classname="w-full h-80 bg-secondary flex items-center justify-center relative overflow-hidden p-8">
+          {/* Red Spotlight Gradient Layer */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle,_var(--color-primary)_0%,_transparent_70%)] opacity-40 z-0" />
+          
+          {/* Product Image with floating hover effect */}
+          <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-auto h-full max-h-full object-contain z-10 transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4" 
+          />
+          
+          {/* Subtle Contact Shadow */}
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-1/2 h-4 bg-black/20 blur-xl rounded-[100%] z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         </Group>
 
         <Group classname={"p-6"}>

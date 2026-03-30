@@ -1,7 +1,11 @@
+import mass from "/src/assets/mass.avif";
+import usegainz from "/src/assets/usegainz.avif";
+
 const products = [
   {
     id: 1,
     name: 'Serious Mass',
+    image: mass,
     description: 'High-calorie formula designed to support muscle gain and weight increase.',
     features: [
       'High protein & carbohydrate blend',
@@ -16,6 +20,7 @@ const products = [
   {
     id: 2,
     name: 'Serious Gainz',
+    image: usegainz,
     description: 'Advanced formula to support strength, recovery, and athletic performance.',
     features: [
       'Supports strength and endurance',
