@@ -7,6 +7,7 @@ import Container from "/src/ui/Container";
 import Paragraph from "/src/ui/Paragraph";
 import HeaderTexts from "/src/ui/HeaderTexts";
 
+import { handleOrder } from "/src/helpers/helpers";
 import { useTypewriter } from "/src/hooks/useTypewriter";
 
 export default function CTA() {
@@ -26,7 +27,7 @@ export default function CTA() {
         <HeaderTexts secondary={true} classname={"text-sm md:text-base text-white/90 mb-10 max-w-2xl md:max-w-full mx-auto"}>
           Premium supplements designed to help you gain size, improve performance, and recover faster.
         </HeaderTexts>
-        <Button classname={"bg-white text-primary py-3 px-15 rounded-full whitespace-nowrap font-bold text-lg hover:bg-white/90 cursor-pointer transition-all"}>
+        <Button onclick={() => handleOrder(null)} classname={"bg-white text-primary py-3 px-15 rounded-full whitespace-nowrap font-bold text-lg hover:bg-white/90 cursor-pointer transition-all"}>
           Order Now
         </Button>
         <Paragraph classname={"text-sm text-white/70 mt-4 flex items-center justify-center gap-2"}>
