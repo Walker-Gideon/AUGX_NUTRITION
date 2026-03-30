@@ -20,8 +20,9 @@ export default function Navigation() {
                         spy={true}
                         duration={500}
                         offset={-100}
+                        onClick={() => setActiveIndex(index)}
                         onSetActive={() => setActiveIndex(index)}
-                        onSetInactive={() => setActiveIndex(prev => prev === index ? null : prev)}
+                        onSetInactive={() => setActiveIndex(prev => (prev === index ? null : prev))}
                         className={`
                             group/navitem
                             ${button.styling}
@@ -43,6 +44,12 @@ export default function Navigation() {
                     </Link>
                 ))}
             </Group>
+            {/* Hidden links to clear selection on Hero, CTA, and Footer */}
+            <div className="hidden">
+                <Link to="hero" spy={true} onSetActive={() => setActiveIndex(null)} />
+                <Link to="cta" spy={true} onSetActive={() => setActiveIndex(null)} />
+                <Link to="footer" spy={true} onSetActive={() => setActiveIndex(null)} />
+            </div>
         </nav>
     );
 }

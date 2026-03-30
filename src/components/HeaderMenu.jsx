@@ -51,9 +51,12 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                         spy={true}
                                         duration={500}
                                         offset={-100}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={() => {
+                                            setActiveIndex(index);
+                                            setIsOpen(false);
+                                        }}
                                         onSetActive={() => setActiveIndex(index)}
-                                        onSetInactive={() => setActiveIndex(prev => prev === index ? null : prev)}
+                                        onSetInactive={() => setActiveIndex(prev => (prev === index ? null : prev))}
                                         className={`group/navitem relative flex flex-col cursor-pointer w-fit transition-colors duration-300 ${activeIndex === index ? "text-primary" : "hover:text-primary"}`}
                                     >
                                         {button.name}
@@ -61,6 +64,12 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                     </Link>
                                 </motion.div>
                             ))}
+                            {/* Hidden links to clear selection on Hero, CTA, and Footer */}
+                            <div className="hidden">
+                                <Link to="hero" spy={true} onSetActive={() => setActiveIndex(null)} />
+                                <Link to="cta" spy={true} onSetActive={() => setActiveIndex(null)} />
+                                <Link to="footer" spy={true} onSetActive={() => setActiveIndex(null)} />
+                            </div>
                         </Group>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
