@@ -11,8 +11,8 @@ export default function Navigation() {
     const [activeIndex, setActiveIndex] = useState(null);
 
     return (
-        <nav className={"hidden large:flex w-[35%] lg:w-[30%] border border-white rounded-full py-3.5 px-8 bg-white shadow-xl/20 transition-all group font-headlines text-sm font-semibold"}>
-            <Group classname={"w-full flex items-center justify-center text-center gap-5"}>
+        <nav className={"hidden large:flex w-2/5 lg:w-1/3 border border-white rounded-full py-3.5 px-10 bg-white shadow-xl/20 transition-all group font-headlines text-sm font-semibold"}>
+            <Group classname={"w-full flex items-center justify-center text-center gap-6"}>
                 {buttons.map((button, index) => (
                     <Link
                         key={index}
