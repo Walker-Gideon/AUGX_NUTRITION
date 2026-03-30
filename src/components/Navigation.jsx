@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 
 import Span from "/src/ui/Span";
 import Group from "/src/ui/Group";
+import HiddenSections from "./HiddenSections";
 
 import buttons from "/src/data/navigationData";
 
@@ -44,12 +45,7 @@ export default function Navigation() {
                     </Link>
                 ))}
             </Group>
-            {/* Hidden links to clear selection on Hero, CTA, and Footer */}
-            <div className="hidden">
-                <Link to="hero" spy={true} onSetActive={() => setActiveIndex(null)} />
-                <Link to="cta" spy={true} onSetActive={() => setActiveIndex(null)} />
-                <Link to="footer" spy={true} onSetActive={() => setActiveIndex(null)} />
-            </div>
+            <HiddenSections setActiveIndex={setActiveIndex} />
         </nav>
     );
 }

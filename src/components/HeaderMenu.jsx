@@ -3,8 +3,9 @@ import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "motion/react";
 
 import Group from "/src/ui/Group";
-import Paragraph from "/src/ui/Paragraph";
 import ActionButton from "./ActionButton";
+import Paragraph from "/src/ui/Paragraph";
+import HiddenSections from "./HiddenSections";
 
 import buttons from "/src/data/navigationData";
 
@@ -64,12 +65,7 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                     </Link>
                                 </motion.div>
                             ))}
-                            {/* Hidden links to clear selection on Hero, CTA, and Footer */}
-                            <div className="hidden">
-                                <Link to="hero" spy={true} onSetActive={() => setActiveIndex(null)} />
-                                <Link to="cta" spy={true} onSetActive={() => setActiveIndex(null)} />
-                                <Link to="footer" spy={true} onSetActive={() => setActiveIndex(null)} />
-                            </div>
+                            <HiddenSections setActiveIndex={setActiveIndex} />
                         </Group>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
