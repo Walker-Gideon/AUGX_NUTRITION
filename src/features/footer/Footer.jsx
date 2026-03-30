@@ -1,11 +1,13 @@
 import { Link } from "react-scroll";
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
+import { useState, useEffect } from "react";
 import { LuInstagram, LuArrowRight } from "react-icons/lu";
 
 import Group from "/src/ui/Group";
 import Button from "/src/ui/Button";
 import FooterUi from "/src/ui/FooterUi";
 import Paragraph from "/src/ui/Paragraph";
+import Toast from "/src/components/Toast";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import { UnorderedList, ListItem } from "/src/ui/List";
 
@@ -13,6 +15,37 @@ import quickLinks from "/src/data/footerData";
 
 export default function Footer() {
   const [state, handleSubmit] = useForm("mojpdbnn");
+  const [toast, setToast] = useState({ visible: false, message: "", type: "success" });
+
+  useEffect(() => {
+    // Handle Success
+    if (state.succeeded) {
+      setToast({ 
+        visible: true, 
+        message: "Thanks for signing up! We'll keep you updated.", 
+        type: "success" 
+      });
+      const timer = setTimeout(() => setToast(prev => ({ ...prev, visible: false })), 5000);
+      return () => clearTimeout(timer);
+    }
+
+    // Handle Error (Trigger if not submitting, not succeeded, and has errors)
+    if (!state.submitting && !state.succeeded && state.errors) {
+      // Formspree errors can be an array or a single object depending on the version
+      const errorMsg = Array.isArray(state.errors) 
+        ? (state.errors[0]?.message || "Invalid email. Please try again.")
+        : "Something went wrong. Please check your email.";
+      
+      setToast({ 
+        visible: true, 
+        message: errorMsg, 
+        type: "error" 
+      });
+      
+      const timer = setTimeout(() => setToast(prev => ({ ...prev, visible: false })), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [state.succeeded, state.errors, state.submitting]);
 
   const currentYear = new Date().getFullYear();
   const styling = {
@@ -85,20 +118,7 @@ export default function Footer() {
               Get exclusive offers and product updates.
             </Paragraph>
             <Group classname="mt-8 flex flex-col gap-2">
-              {state.succeeded && (
-                <Paragraph classname={"text-primary text-xs font-bold"}>
-                  Thanks for signing up! We'll keep you updated.
-                </Paragraph>
-              )}
-              
-              <ValidationError 
-                prefix="Email" 
-                field="email"
-                errors={state.errors}
-                className="text-primary text-xs font-bold"
-              />
-
-              <form onSubmit={handleSubmit} className={"flex h-11"}>
+              <form key={state.succeeded ? "success" : "initial"} onSubmit={handleSubmit} className={"flex h-11"}>
                 <input
                   name="email" 
                   id="email" 
@@ -121,6 +141,13 @@ export default function Footer() {
           </Paragraph>
         </Group>
       </Group>
+
+      <Toast 
+        message={toast.message} 
+        type={toast.type} 
+        isVisible={toast.visible} 
+        onClose={() => setToast(prev => ({ ...prev, visible: false }))} 
+      />
     </FooterUi>
   );
 }

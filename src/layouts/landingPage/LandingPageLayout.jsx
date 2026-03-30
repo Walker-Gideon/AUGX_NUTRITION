@@ -20,3 +20,5 @@ export default function LandingPageLayout() {
     </>
   );
 }
+
+//*  run this "npx formspree deploy" using the email [EMAIL_ADDRESS] in the formspree.json file

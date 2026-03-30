@@ -2,7 +2,7 @@
   "forms": {
     "newsletterForm": {
       "name": "Newsletter Form",
-      "actions": [{ "type": "email", "to": "gideonawortwe3@gmail.com" }],
+      "actions": [{ "type": "email", "to": "[EMAIL_ADDRESS]" }],
       "fields": {"email": {"required": "true", "type": "email"}}
     }
   }
