@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 
+import Span from "/src/ui/Span";
 import Group from "/src/ui/Group";
 
 import buttons from "/src/data/navigationData";
@@ -29,7 +30,7 @@ export default function Navigation() {
                             ${activeIndex === index ? "text-primary" : "hover:text-primary"}
                         `}
                     >
-                        <span className="relative w-fit">
+                        <Span classname={"relative w-fit"}>
                             {button.name}
                             <span
                                 className={`
@@ -38,7 +39,7 @@ export default function Navigation() {
                                     ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}
                                 `}
                             />
-                        </span>
+                        </Span>
                     </Link>
                 ))}
             </Group>
