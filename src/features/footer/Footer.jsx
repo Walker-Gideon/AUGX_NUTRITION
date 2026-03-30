@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { useForm, ValidationError } from '@formspree/react';
 import { LuInstagram, LuArrowRight } from "react-icons/lu";
 
 import Group from "/src/ui/Group";
@@ -11,6 +12,8 @@ import { UnorderedList, ListItem } from "/src/ui/List";
 import quickLinks from "/src/data/footerData";
 
 export default function Footer() {
+  const [state, handleSubmit] = useForm("mojpdbnn");
+
   const currentYear = new Date().getFullYear();
   const styling = {
     header: "font-headlines font-bold mb-4",
@@ -65,7 +68,11 @@ export default function Footer() {
               <Paragraph classname={styling.paragraph}>
                 Connect with us
               </Paragraph>
-              <a href="#" className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 ${styling.listItem}`}>
+              <a 
+                href="https://www.instagram.com/augx_nutrition/?hl=en" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 ${styling.listItem}`}>
                 <LuInstagram size={25} />
               </a>
             </Group>
@@ -77,16 +84,33 @@ export default function Footer() {
             <Paragraph classname={styling.paragraph}>
               Get exclusive offers and product updates.
             </Paragraph>
-            <form className={"flex mt-8 h-11"}>
-              <input
-                type="email"
-                placeholder="Your email"
-                className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs outline-none"}
+            <Group classname="mt-8 flex flex-col gap-2">
+              {state.succeeded && (
+                <Paragraph classname={"text-primary text-xs font-bold"}>
+                  Thanks for signing up! We'll keep you updated.
+                </Paragraph>
+              )}
+              
+              <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
+                className="text-primary text-xs font-bold"
               />
-              <Button type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
-                <LuArrowRight size={18} />
-              </Button>
-            </form>
+
+              <form onSubmit={handleSubmit} className={"flex h-11"}>
+                <input
+                  name="email" 
+                  id="email" 
+                  type="email"
+                  placeholder="Your email"
+                  className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs outline-none"}
+                />
+                <Button disabled={state.submitting} type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
+                  <LuArrowRight size={18} />
+                </Button>
+              </form>
+            </Group>
           </Group>
         </Group>
 
