@@ -55,6 +55,7 @@ export default function MainHeader() {
                     <ActionButton />
                 </Group>
                 <Group classname={"large:hidden z-50 relative"} ref={menuRef}>
+                    {/* Menu icon button */}
                     <ActionButton
                         menu={true}
                         state={open}

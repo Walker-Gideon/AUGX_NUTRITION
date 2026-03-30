@@ -24,7 +24,7 @@ export default function ActionButton({ padding, menu, onclick, state }) {
     }
 
     return (
-        <Button primary={true} padding={padding} classname={"flex items-center gap-2 text-white border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}>
+        <Button onclick={onclick} primary={true} padding={padding} classname={"flex items-center gap-2 text-white border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}>
             <Span>Order Now</Span>
         </Button>
     );
