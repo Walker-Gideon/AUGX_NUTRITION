@@ -1,11 +1,12 @@
-import mass from "/src/assets/mass.avif";
-import usegainz from "/src/assets/usegainz.avif";
+import mass01 from "/src/assets/mass01.png";
+import gainz01 from "/src/assets/gainz01.png";
+
 
 const products = [
   {
     id: 1,
     name: 'Serious Mass',
-    image: mass,
+    image: mass01,
     description: 'High-calorie formula designed to support muscle gain and weight increase.',
     features: [
       'High protein & carbohydrate blend',
@@ -15,12 +16,12 @@ const products = [
     ],
     cta: 'Order Now',
     // price: '$49.99',
-    icon: '🏋️'
+    imgClass: 'h-[100%] w-auto'
   },
   {
     id: 2,
     name: 'Serious Gainz',
-    image: usegainz,
+    image: gainz01,
     description: 'Advanced formula to support strength, recovery, and athletic performance.',
     features: [
       'Supports strength and endurance',
@@ -30,7 +31,7 @@ const products = [
     ],
     cta: 'Order Now',
     // price: '$49.99',
-    icon: '⚡'
+    imgClass: 'w-[60%] h-[62%]'
   }
 ];
 

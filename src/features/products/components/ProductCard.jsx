@@ -9,7 +9,7 @@ import { handleOrder } from "/src/helpers/helpers";
 export default function ProductCard({ product }) {
   return (
       <Card classname="group overflow-hidden" type="cards">
-        <Group classname="w-full h-80 bg-secondary flex items-center justify-center relative overflow-hidden p-8">
+        <Group classname="w-full h-80 bg-secondary flex items-center justify-center relative overflow-hidden p-4">
           {/* Red Spotlight Gradient Layer */}
           <div className="absolute inset-0 bg-[radial-gradient(circle,_var(--color-primary)_0%,_transparent_70%)] opacity-40 z-0" />
           
@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
           <img 
               src={product.image} 
               alt={product.name} 
-              className="w-auto h-full max-h-full object-contain z-10 transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4" 
+              className={`object-contain z-10 transition-all duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-4 ${product.imgClass || "h-[85%] w-auto"}`}
           />
           
           {/* Subtle Contact Shadow */}
