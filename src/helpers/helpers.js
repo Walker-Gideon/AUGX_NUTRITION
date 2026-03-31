@@ -1,5 +1,5 @@
 const handleOrder = (productName) => {
-    const phoneNumber = "+233547676236"; 
+    const phoneNumber = "+233249414041"; 
 
     const message = productName 
         ? `Hello AUGX Nutrition, I'm interested in ordering *${productName}*. Could you please provide more details?`
