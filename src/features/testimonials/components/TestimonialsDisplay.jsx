@@ -8,7 +8,6 @@ import HeaderTexts from "/src/ui/HeaderTexts";
 export default function TestimonialsDisplay({ testimonial }) {
   return (
     <Card type="cards" classname={"p-6 lg:p-8 space-y-4 shadow-lg"}>
-      {/* Rating */}
       <Flex classname={"gap-1 mb-4"}>
         {Array.from({ length: testimonial.rating }).map((_, i) => (
           <Span key={i} classname={"text-yellow-500 text-sm md:text-lg"}>★</Span>
