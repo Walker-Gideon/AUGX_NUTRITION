@@ -130,6 +130,9 @@ export default function Footer() {
                   <LuArrowRight size={18} />
                 </Button>
               </form>
+              <Paragraph classname={"text-white/70 text-xs"}>
+                No spam. Only updates and exclusive offers.
+              </Paragraph>
             </Group>
           </Group>
         </Group>
