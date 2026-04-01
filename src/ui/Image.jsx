@@ -13,7 +13,7 @@ export default function Image({ source, alternate, classname, priority = false, 
             width={width}
             height={height}
             onLoad={() => setIsLoaded(true)}
-            className={`${classname} ${!priority && 'transition-opacity duration-1000 ease-in-out'} ${isLoaded || priority ? 'opacity-100' : 'opacity-0'}`} 
+            className={`${classname} ${!priority && 'transition-all duration-1000 ease-in-out'} ${isLoaded || priority ? 'opacity-100' : 'opacity-0'}`} 
         />
     );
 }
