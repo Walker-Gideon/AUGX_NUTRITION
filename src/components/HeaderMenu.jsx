@@ -51,13 +51,12 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                         smooth={true}
                                         spy={true}
                                         duration={500}
-                                        offset={-100}
+                                        offset={-80}
                                         onClick={() => {
                                             setActiveIndex(index);
                                             setIsOpen(false);
                                         }}
                                         onSetActive={() => setActiveIndex(index)}
-                                        onSetInactive={() => setActiveIndex(prev => (prev === index ? null : prev))}
                                         className={`group/navitem relative flex flex-col cursor-pointer w-fit transition-colors duration-300 ${activeIndex === index ? "text-primary" : "hover:text-primary"}`}
                                     >
                                         {button.name}
