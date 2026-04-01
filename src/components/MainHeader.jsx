@@ -15,25 +15,29 @@ export default function MainHeader() {
         setOpen(prev => !prev);
     }
 
-    // Reset menu on resize to large screen
+    // Reset menu on resize to large screen using matchMedia (High Performance)
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 900) {
-                setOpen(false);
-            }
+        const mediaQuery = window.matchMedia("(min-width: 900px)");
+        const handleMediaQueryChange = (e) => {
+            if (e.matches) setOpen(false);
         };
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        
+        mediaQuery.addEventListener("change", handleMediaQueryChange);
+        return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
     }, []);
 
-    // Close menu on scroll
+    // Close menu on scroll - Only attach listener when menu is open
     useEffect(() => {
+        if (!open) return;
+
         const handleScroll = () => {
-            if (open) setOpen(false);
+            setOpen(false);
         };
-        window.addEventListener("scroll", handleScroll);
+        
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, [open]);
+
 
     // Close menu on click outside
     useEffect(() => {
