@@ -1,6 +1,9 @@
 import { Link } from "react-scroll";
 
 import Group from "/src/ui/Group";
+import Image from "/src/ui/Image";
+
+import logo from "/src/assets/logo000.png";
 
 export default function Logo() {
     return (
@@ -11,9 +14,9 @@ export default function Logo() {
                 spy={true}
                 duration={500}
                 offset={-100}
-                className={"font-headlines text-2xl font-bold cursor-pointer uppercase"}
+                className={"cursor-pointer flex items-center"}
             >
-                AUGX
+                <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" />
             </Link>
         </Group>
     );

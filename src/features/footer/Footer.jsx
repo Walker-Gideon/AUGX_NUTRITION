@@ -3,6 +3,7 @@ import { useForm } from '@formspree/react';
 import { useState, useEffect } from "react";
 import { LuInstagram, LuArrowRight } from "react-icons/lu";
 
+import Image from "/src/ui/Image";
 import Group from "/src/ui/Group";
 import Button from "/src/ui/Button";
 import FooterUi from "/src/ui/FooterUi";
@@ -11,7 +12,9 @@ import Toast from "/src/components/Toast";
 import HeaderTexts from "/src/ui/HeaderTexts";
 import { UnorderedList, ListItem } from "/src/ui/List";
 
+import logo from "/src/assets/logo000.png";
 import quickLinks from "/src/data/footerData";
+import { handleOrder } from "/src/helpers/helpers";
 
 export default function Footer() {
   const [state, handleSubmit] = useForm("mojpdbnn");
@@ -63,7 +66,9 @@ export default function Footer() {
         <Group classname={"grid medium:grid-cols-2 md:grid-cols-3 large:grid-cols-4 gap-8"}>
           {/* Brand */}
           <Group classname={"md:col-span-1"}>
-            <HeaderTexts classname={`text-2xl uppercase ${styling.header}`}>AUGX</HeaderTexts>
+            <Group classname={"bg-white w-fit p-1 mb-4"}>
+              <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" />
+            </Group>
             <Paragraph classname={"text-white/70 text-base medium:text-sm"}>
               Fuel Your Body. Elevate Your Training.
             </Paragraph>
@@ -94,8 +99,7 @@ export default function Footer() {
           <Group>
             <HeaderTexts classname={`${styling.header}`}>Support</HeaderTexts>
             <Group classname={"text-sm"}>
-              {/* How should I handle this? */}
-              <Button classname={`text-white/70 mb-2 ${styling.listItem}`}>
+              <Button onclick={() => handleOrder(null)} classname={`text-white/70 mb-2 ${styling.listItem}`}>
                 Contact Us
               </Button>
               <Paragraph classname={styling.paragraph}>
@@ -105,7 +109,7 @@ export default function Footer() {
                 href="https://www.instagram.com/augx_nutrition/?hl=en" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 ${styling.listItem}`}>
+                className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 hover:scale-110 active:scale-95 transition-all duration-300 ${styling.listItem}`}>
                 <LuInstagram size={25} />
               </a>
             </Group>
