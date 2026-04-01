@@ -34,6 +34,7 @@ export default function Hero() {
                 source={augxHero} 
                 alternate="AUGX Fitness Product" 
                 classname="w-full h-auto object-contain" 
+                priority={true}
               />
             </motion.div>
           </Group>
