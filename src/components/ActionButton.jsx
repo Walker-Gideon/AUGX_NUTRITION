@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "motion/react";
 import { LuAlignJustify, LuX } from "react-icons/lu";
+import { motion, AnimatePresence } from "motion/react";
 
 import Span from "/src/ui/Span";
 import Button from "/src/ui/Button";
@@ -9,7 +9,7 @@ import { handleOrder } from "/src/helpers/helpers";
 export default function ActionButton({ padding, menu, onclick, state }) {
     if (menu) {
         return (
-            <Button onclick={onclick} primary={true} padding={"p-2 medium:p-2.5"} classname={`group relative flex items-center gap-1 text-white z-50 ${state ? "" : "border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}`}>
+            <Button ariaLabel={state ? "Close Menu" : "Open Menu"} onclick={onclick} primary={true} padding={"p-2 medium:p-2.5"} classname={`group relative flex items-center gap-1 text-white z-50 ${state ? "" : "border-primary bg-primary shadow-xl/30 hover:shadow-xl/40"}`}>
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={state ? "close" : "open"}

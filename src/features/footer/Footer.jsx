@@ -130,7 +130,7 @@ export default function Footer() {
                   placeholder="Your email"
                   className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs outline-none"}
                 />
-                <Button disabled={state.submitting} type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
+                <Button ariaLabel="Subscribe to newsletter" disabled={state.submitting} type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
                   <LuArrowRight size={18} />
                 </Button>
               </form>

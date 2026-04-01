@@ -1,12 +1,19 @@
-export default function HeaderTexts({ children, classname, secondary, type }) {
+export default function HeaderTexts({ children, classname, secondary, isH1, type }) {
     const defaultStyling = {
-        subHeading: "text-base medium:text-lg text-quaternary font-text", // w-full py-4 px-4 medium:px-16 middle:px-0 mb-6
+        subHeading: "text-base medium:text-lg text-quaternary font-text",
     };
 
+    const style = type && defaultStyling[type] ? defaultStyling[type] : "";
+    const finalClass = `${style} ${classname || ""}`.trim();
+
+    if (isH1) {
+        return <h1 className={finalClass}>{children}</h1>;
+    }
+
     if (secondary) {
-        return <h2 className={`${defaultStyling[type]} ${classname}`}>{children}</h2>;
+        return <h3 className={finalClass}>{children}</h3>;
     }
 
     // Default
-    return <h1 className={classname}>{children}</h1>;
+    return <h2 className={finalClass}>{children}</h2>;
 }
