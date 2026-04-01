@@ -7,7 +7,7 @@ import Group from "/src/ui/Group";
 import Container from "/src/ui/Container";
 import HeroText from "./components/HeroText";
 
-import augxHero from "/src/assets/augxHero.png";
+const augxHero = "/augxHero.png";
 
 export default function Hero() {
   return (
