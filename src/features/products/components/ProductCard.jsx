@@ -17,6 +17,8 @@ export default function ProductCard({ product }) {
           <Image 
               source={product.image} 
               alternate={product.name} 
+              width="800"
+              height="800"
               classname={`object-contain z-10 transition-all duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-4 ${product.imgClass || "h-[85%] w-auto"}`}
           />
           

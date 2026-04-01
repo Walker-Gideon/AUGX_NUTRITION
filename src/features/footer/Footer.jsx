@@ -67,7 +67,7 @@ export default function Footer() {
           {/* Brand */}
           <Group classname={"md:col-span-1"}>
             <Group classname={"bg-white w-fit p-1 mb-4"}>
-              <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" />
+              <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" width="200" height="100" />
             </Group>
             <Paragraph classname={"text-white/70 text-base medium:text-sm"}>
               Fuel Your Body. Elevate Your Training.

@@ -34,6 +34,8 @@ export default function Hero() {
                 source={augxHero} 
                 alternate="AUGX Fitness Product" 
                 classname="w-full h-auto object-contain" 
+                width="800"
+                height="800"
                 priority={true}
               />
             </motion.div>

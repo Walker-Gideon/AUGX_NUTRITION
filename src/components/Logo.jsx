@@ -17,7 +17,7 @@ export default function Logo() {
                 offset={-100}
                 className={"cursor-pointer flex items-center"}
             >
-                <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" />
+                <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" width="200" height="100" />
             </Link>
         </Group>
     );

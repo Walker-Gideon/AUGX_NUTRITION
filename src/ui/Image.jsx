@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Image({ source, alternate, classname, priority = false }) {
+export default function Image({ source, alternate, classname, priority = false, width, height }) {
     const [isLoaded, setIsLoaded] = useState(false);
 
     return (
@@ -8,8 +8,10 @@ export default function Image({ source, alternate, classname, priority = false }
             src={source} 
             alt={alternate} 
             loading={priority ? "eager" : "lazy"}
-            fetchpriority={priority ? "high" : "auto"}
+            fetchPriority={priority ? "high" : "auto"}
             decoding="async"
+            width={width}
+            height={height}
             onLoad={() => setIsLoaded(true)}
             className={`${classname} ${!priority && 'transition-opacity duration-1000 ease-in-out'} ${isLoaded || priority ? 'opacity-100' : 'opacity-0'}`} 
         />
