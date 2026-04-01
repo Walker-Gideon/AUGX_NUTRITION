@@ -99,7 +99,7 @@ export default function Footer() {
           <Group>
             <HeaderTexts classname={`${styling.header}`}>Support</HeaderTexts>
             <Group classname={"text-sm"}>
-              <Button onclick={() => handleOrder(null)} classname={`text-white/70 mb-2 ${styling.listItem}`}>
+              <Button onclick={() => handleOrder(null, true)} classname={`text-white/70 mb-2 ${styling.listItem}`}>
                 Contact Us
               </Button>
               <Paragraph classname={styling.paragraph}>
