@@ -32,7 +32,7 @@ This application was engineered with a strict adherence to Google's Lighthouse a
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone [https://github.com/Walker-Gideon/AUGX_NUTRITION.git]
    cd AUGX
    ```
 
