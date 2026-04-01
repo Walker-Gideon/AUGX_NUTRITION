@@ -1,7 +1,7 @@
-import qualityNutrients01 from "/src/assets/ingredient01.jpg";
-import recovery01 from "/src/assets/recovery01.jpg";
-import lifeStyle01 from "/src/assets/lifeStyle01.jpg";
-import performance01 from "/src/assets/performance01.jpg";
+import recovery01 from "/src/assets/recovery01_opt.png";
+import lifeStyle01 from "/src/assets/lifestyle01_opt.png";
+import performance01 from "/src/assets/performance01_opt.png";
+import qualityNutrients01 from "/src/assets/ingredient01_opt.png";
 
 const benefits = [
   {
