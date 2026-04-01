@@ -30,7 +30,7 @@ export default function CTA() {
         <Button onclick={() => handleOrder(null)} classname={"bg-white text-primary py-3 px-15 rounded-full whitespace-nowrap font-bold text-lg hover:bg-white/90 cursor-pointer transition-all"}>
           Order Now
         </Button>
-        <Paragraph classname={"text-sm text-white/70 mt-4 flex items-center justify-center gap-2"}>
+        <Paragraph classname={"text-sm text-white/90 mt-4 flex items-center justify-center gap-2"}>
           <Span>
             {displayed}
             <span className="inline-block w-[2px] h-[1em] bg-white align-middle ml-0.5 animate-pulse" />

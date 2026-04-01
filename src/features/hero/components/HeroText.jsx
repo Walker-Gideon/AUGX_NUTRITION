@@ -27,7 +27,7 @@ export default function HeroText() {
                 <Paragraph classname={"hero-line [text-shadow:2px_3px_12px_rgba(175,61,59,0.25)] [animation-delay:0.35s]"}>Elevate Your Training.</Paragraph>
             </HeaderTexts>
 
-            <HeaderTexts secondary={true} classname={"py-4 px-4 middle:px-0 mb-6 text-base lg:text-lg text-quaternary font-text w-full"}>
+            <HeaderTexts classname={"py-4 px-4 middle:px-0 mb-6 text-base lg:text-lg text-quaternary font-text w-full"}>
               Premium supplements designed to support
               muscle growth, recovery and performance.
             </HeaderTexts>

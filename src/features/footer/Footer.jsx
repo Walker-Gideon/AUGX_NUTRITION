@@ -109,6 +109,7 @@ export default function Footer() {
                 href="https://www.instagram.com/augx_nutrition/?hl=en" 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                aria-label="Instagram"
                 className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 hover:scale-110 active:scale-95 transition-all duration-300 ${styling.listItem}`}>
                 <LuInstagram size={25} />
               </a>
