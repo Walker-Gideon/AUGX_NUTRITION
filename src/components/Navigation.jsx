@@ -20,10 +20,9 @@ export default function Navigation() {
                         smooth={true}
                         spy={true}
                         duration={500}
-                        offset={-100}
+                        offset={-80}
                         onClick={() => setActiveIndex(index)}
                         onSetActive={() => setActiveIndex(index)}
-                        onSetInactive={() => setActiveIndex(prev => (prev === index ? null : prev))}
                         className={`
                             group/navitem
                             ${button.styling}
