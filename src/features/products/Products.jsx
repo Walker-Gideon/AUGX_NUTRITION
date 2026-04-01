@@ -24,7 +24,7 @@ export default function Products() {
   const normalPart = displayed.slice(BOLD_END);
 
   return (
-    <Container section="products" classname={"h-full w-full px-4 md:px-10 lg:px-16 py-20 lg:py-32 bg-background"}>
+    <Container section="products" classname={"h-full w-full px-4 md:px-10 lg:px-16 py-20 lg:py-32 bg-background section-priority-low"}>
       <Group classname={"max-w-7xl mx-auto px-4 md:px-6 lg:px-8"}>
         <ProductHeader />
         <Group classname={"max-w-sm md:max-w-3xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12"}>
