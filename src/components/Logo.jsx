@@ -10,6 +10,7 @@ export default function Logo() {
         <Group>
             <Link
                 to="hero"
+                href="#hero"
                 smooth={true}
                 spy={true}
                 duration={500}

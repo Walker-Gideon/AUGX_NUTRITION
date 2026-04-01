@@ -82,6 +82,7 @@ export default function Footer() {
                 <ListItem key={link.link}>
                   <Link
                     to={link.link}
+                    href={`#${link.link}`}
                     smooth={true}
                     spy={true}
                     duration={500}

@@ -36,6 +36,7 @@ export default function HeroText() {
                 <ActionButton padding={"py-3.5 px-8 lg:px-10"} />
                 <Link
                     to="products"
+                    href="#products"
                     smooth={true}
                     spy={true}
                     duration={500}

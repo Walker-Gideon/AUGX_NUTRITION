@@ -17,6 +17,7 @@ export default function Navigation() {
                     <Link
                         key={index}
                         to={button.link}
+                        href={`#${button.link}`}
                         smooth={true}
                         spy={true}
                         duration={500}
