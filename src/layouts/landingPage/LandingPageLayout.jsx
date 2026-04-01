@@ -1,11 +1,14 @@
-import CTA from "/src/features/cta/CTA";
-import Container from "/src/ui/Container";
+import { lazy, Suspense } from "react";
+
 import Hero from "/src/features/hero/Hero";
-import Footer from "/src/features/footer/Footer";
 import MainHeader from "/src/components/MainHeader";
 import Products from "/src/features/products/Products";
-import Benefits from "/src/features/benefits/Benefits";
-import Testimonials from "/src/features/testimonials/Testimonials";
+
+// Lazy load sections below the fold
+const CTA = lazy(() => import("/src/features/cta/CTA"));
+const Footer = lazy(() => import("/src/features/footer/Footer"));
+const Benefits = lazy(() => import("/src/features/benefits/Benefits"));
+const Testimonials = lazy(() => import("/src/features/testimonials/Testimonials"));
 
 export default function LandingPageLayout() {
   return (
@@ -13,12 +16,16 @@ export default function LandingPageLayout() {
       <MainHeader />
       <Hero />
       <Products />
-      <Benefits />
-      <Testimonials />
-      <CTA />
-      <Footer />
+      
+      <Suspense fallback={null}>
+        <Benefits />
+        <Testimonials />
+        <CTA />
+        <Footer />
+      </Suspense>
     </>
   );
 }
+
 
 //*  run this "npx formspree deploy" using the email [EMAIL_ADDRESS] in the formspree.json file
