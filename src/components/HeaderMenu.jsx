@@ -58,7 +58,7 @@ export default function HeaderMenu({ isOpen, setIsOpen }) {
                                             setIsOpen(false);
                                         }}
                                         onSetActive={() => setActiveIndex(index)}
-                                        className={`group/navitem relative flex flex-col cursor-pointer w-fit transition-colors duration-300 ${activeIndex === index ? "text-primary" : "hover:text-primary"}`}
+                                        className={`group/navitem relative flex flex-col cursor-pointer w-fit transition-colors duration-300 focus:outline-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:rounded ${activeIndex === index ? "text-primary" : "hover:text-primary"}`}
                                     >
                                         {button.name}
                                         <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[2px] bg-primary rounded-full transition-all duration-300 ease-in-out ${activeIndex === index ? "w-full opacity-100" : "w-0 opacity-0 group-hover/navitem:w-full group-hover/navitem:opacity-100"}`} />

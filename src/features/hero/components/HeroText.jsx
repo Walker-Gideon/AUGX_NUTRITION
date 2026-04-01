@@ -41,7 +41,7 @@ export default function HeroText() {
                     spy={true}
                     duration={500}
                     offset={-100}
-                    className="border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 lg:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap"
+                    className="border border-primary text-primary flex items-center gap-2 rounded-full py-3.5 px-4 lg:px-6 cursor-pointer text-xs uppercase font-semibold font-headlines group shadow-xl/30 whitespace-nowrap outline-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
                 >
                     <Span>Learn More</Span>
                     <LuArrowDown size={18} className="group-hover:translate-y-1 duration-500 transition-all" />

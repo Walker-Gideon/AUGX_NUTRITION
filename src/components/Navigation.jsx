@@ -27,8 +27,7 @@ export default function Navigation() {
                         className={`
                             group/navitem
                             ${button.styling}
-                            relative flex flex-col items-center cursor-pointer
-                            transition-colors duration-300
+                            relative flex flex-col items-center cursor-pointer transition-colors duration-300 focus:outline-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:rounded
                             ${activeIndex === index ? "text-primary" : "hover:text-primary"}
                         `}
                     >

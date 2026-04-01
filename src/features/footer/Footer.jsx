@@ -58,6 +58,7 @@ export default function Footer() {
     listItem: "cursor-pointer hover:text-primary transition-colors",
     input: "px-4 py-2 rounded-l-lg text-black w-full",
     button: "bg-primary px-4 rounded-r-lg hover:bg-primary/90 transition-colors",
+    focusClass: "outline-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:rounded",
   }
 
   return (
@@ -87,7 +88,7 @@ export default function Footer() {
                     spy={true}
                     duration={500}
                     offset={-100}
-                    className={styling.listItem}
+                    className={`${styling.listItem} ${styling.focusClass}`}
                   >
                     {link.name}
                   </Link>
@@ -100,7 +101,7 @@ export default function Footer() {
           <Group>
             <HeaderTexts classname={`${styling.header}`}>Support</HeaderTexts>
             <Group classname={"text-sm"}>
-              <Button onclick={() => handleOrder(null, true)} classname={`text-white/70 mb-2 ${styling.listItem}`}>
+              <Button onclick={() => handleOrder(null, true)} classname={`text-white/70 mb-2 ${styling.focusClass} ${styling.listItem}`}>
                 Contact Us
               </Button>
               <Paragraph classname={styling.paragraph}>
@@ -111,7 +112,7 @@ export default function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Instagram"
-                className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 hover:scale-110 active:scale-95 transition-all duration-300 ${styling.listItem}`}>
+                className={`border border-white w-12 h-12 flex items-center justify-center p-3 rounded-full bg-white text-black mt-4 hover:scale-110 active:scale-95 transition-all duration-300 ${styling.focusClass} ${styling.listItem}`}>
                 <LuInstagram size={25} />
               </a>
             </Group>
@@ -130,7 +131,7 @@ export default function Footer() {
                   id="email" 
                   type="email"
                   placeholder="Your email"
-                  className={"border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs outline-none"}
+                  className={`${styling.focusClass} border border-r-0 border-white bg-transparent px-4 h-full rounded-l-lg text-sm text-white w-full placeholder:text-white/70 placeholder:text-xs transition-all duration-300 border-transparent`}
                 />
                 <Button ariaLabel="Subscribe to newsletter" disabled={state.submitting} type={true} classname={"bg-primary px-5 h-full rounded-r-lg cursor-pointer hover:bg-primary/90 transition-colors flex items-center justify-center"}>
                   <LuArrowRight size={18} />

@@ -14,8 +14,7 @@ export default function Logo() {
                 smooth={true}
                 spy={true}
                 duration={500}
-                offset={-100}
-                className={"cursor-pointer flex items-center"}
+                className={"cursor-pointer flex items-center focus-visible:outline-none"}
             >
                 <Image source={logo} alternate="AUGX Logo" classname="h-15 medium:h-20 w-auto object-contain" width="200" height="100" />
             </Link>
